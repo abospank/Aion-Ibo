@@ -1,0 +1,21 @@
+version: 3.0.3
+apkFileName: iron-ibo.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 33
+versionInfo:
+  versionCode: 44
+  versionName: 4.3
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- gif
+- jpg
+- ogg
+- png
+- androidsupportmultidexversion.txt
+- okhttp3/internal/publicsuffix/publicsuffixes.gz

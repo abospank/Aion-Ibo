@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ff1e2026" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_bg" android:background="@drawable/corner_shadow" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.rtx.niceibo.library.kenburnsview.KenBurnsView android:id="@id/image" android:background="@drawable/shadeed_bg_login" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@id/left_paka" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.3">
+                <ImageView android:id="@id/image_logo" android:visibility="visible" android:layout_width="170.0dp" android:layout_height="140.0dp" android:src="@drawable/home_logo" android:layout_alignParentTop="true" android:layout_marginStart="16.0dp" android:layout_alignParentStart="true" />
+                <RelativeLayout android:background="@drawable/banner_login" android:layout_width="@dimen/_175sdp" android:layout_height="230.0dp" android:layout_marginTop="100.0dp" android:layout_centerInParent="true" android:layout_centerHorizontal="true">
+                    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="10.0dp" android:layout_marginEnd="10.0dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dp">
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                                <TextView android:textSize="14.0dp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/content_main" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Enter Your Playlist Details" />
+                                <TextView android:textSize="14.0dp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/content_sub" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="🇵🇸 SHADEED 🇵🇸" android:fontFamily="@font/quicksand_light" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <FrameLayout android:id="@id/layout_username_holder" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5.0dp">
+                            <EditText android:textSize="10.0dp" android:textColor="@color/cardview_dark_background" android:textColorHint="#ff000000" android:gravity="center_vertical" android:id="@id/ed_username" android:background="@drawable/xciptv_ed" android:paddingLeft="30.0dp" android:focusable="true" android:focusableInTouchMode="true" android:nextFocusRight="@id/ed_password" android:nextFocusDown="@id/ed_password" android:layout_width="match_parent" android:layout_height="30.0dp" android:hint="Add your username" android:ems="10" android:inputType="textPostalAddress|textFilter|textNoSuggestions" android:nextFocusForward="@id/ed_password" android:fontFamily="@font/quicksand_regular" android:focusedByDefault="true" />
+                            <ImageView android:id="@id/imageView19" android:background="@drawable/username_icon" android:paddingLeft="0.0dp" android:focusable="false" android:layout_width="15.0dp" android:layout_height="15.0dp" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" />
+                        </FrameLayout>
+                        <FrameLayout android:id="@id/layout_password_holder" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5.0dp">
+                            <EditText android:textSize="10.0dp" android:textColor="@color/cardview_dark_background" android:textColorHint="#ff000000" android:gravity="center_vertical" android:id="@id/ed_password" android:background="@drawable/xciptv_ed" android:paddingLeft="30.0dp" android:focusable="true" android:nextFocusLeft="@id/code_login" android:nextFocusDown="@id/code_login" android:layout_width="match_parent" android:layout_height="30.0dp" android:hint="Add your password" android:inputType="textVisiblePassword" android:nextFocusForward="@id/code_login" android:fontFamily="@font/quicksand_regular" />
+                            <ImageView android:id="@id/imageView20" android:background="@drawable/password_icon" android:focusable="false" android:layout_width="15.0dp" android:layout_height="15.0dp" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" />
+                        </FrameLayout>
+                        <FrameLayout android:id="@id/layout_accode_holder" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5.0dp">
+                            <EditText android:textSize="10.0dp" android:textColor="@color/cardview_dark_background" android:textColorHint="#ff000000" android:gravity="center_vertical" android:id="@id/ed_code" android:background="@drawable/xciptv_ed" android:paddingLeft="30.0dp" android:focusable="true" android:nextFocusLeft="@id/code_login" android:nextFocusDown="@id/code_login" android:layout_width="match_parent" android:layout_height="30.0dp" android:hint="Activation code" android:ems="10" android:inputType="textPostalAddress|textFilter|textNoSuggestions" android:nextFocusForward="@id/code_login" android:fontFamily="@font/quicksand_regular" />
+                            <ImageView android:id="@id/imageView22" android:background="@drawable/signature" android:focusable="false" android:layout_width="15.0dp" android:layout_height="15.0dp" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" />
+                        </FrameLayout>
+                        <CheckBox android:theme="@style/checkBoxStyleShadeed" android:textColor="#ffffffff" android:id="@id/code_login" android:nextFocusLeft="@id/btn_login" android:nextFocusDown="@id/btn_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Activation code" android:nextFocusForward="@id/btn_login" />
+                        <LinearLayout android:orientation="horizontal" android:focusable="false" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <Button android:textSize="15.0sp" android:textColor="#ffffffff" android:id="@id/btn_login" android:background="@drawable/btn" android:nextFocusUp="@id/code_login" android:layout_width="match_parent" android:layout_height="30.0dp" android:layout_marginTop="10.0dp" android:text="Login" android:layout_weight="1.0" android:textAllCaps="false" android:fontFamily="@font/quicksand_medium" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/my_mac_address" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="22:33:44:55:66:77" android:layout_weight="1.0" android:fontFamily="@font/quicksand_medium" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/loading" android:background="#be000000" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_width="45.0dp" android:layout_height="45.0dp" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</FrameLayout>

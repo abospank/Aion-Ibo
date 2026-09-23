@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image_bg" android:background="@drawable/shadeed_bg_login" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <com.rtx.niceibo.web.RTXAdsViewBoth android:id="@id/sport_webview" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:selectable="false" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/ly_home" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/_60sdp" android:layout_marginBottom="@dimen/_40sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.89" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.rtx.niceibo.ThemePackage.mbackdropImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:id="@id/toplogo" android:layout_width="@dimen/_42sdp" android:layout_height="@dimen/_42sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentTop="true" android:alpha="0.08" android:rotation="45.0" android:layout_marginStart="@dimen/_7sdp" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:layout_width="@dimen/_28sdp" android:layout_height="@dimen/_28sdp" android:layout_marginTop="@dimen/_60sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentTop="true" android:alpha="0.06" android:rotation="-12.0" android:layout_marginStart="@dimen/_35sdp" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:layout_width="@dimen/_18sdp" android:layout_height="@dimen/_18sdp" android:layout_marginBottom="@dimen/_175sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentBottom="true" android:alpha="0.1" android:rotation="6.0" android:layout_marginStart="@dimen/_8sdp" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:layout_width="@dimen/_42sdp" android:layout_height="@dimen/_42sdp" android:layout_marginBottom="@dimen/_125sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentBottom="true" android:alpha="0.08" android:rotation="-29.0" android:layout_marginStart="@dimen/_32sdp" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:id="@id/biglogo" android:layout_width="@dimen/_65sdp" android:layout_height="@dimen/_65sdp" android:layout_marginBottom="@dimen/_45sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentBottom="true" android:alpha="0.1" android:rotation="25.0" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:layout_width="@dimen/_45sdp" android:layout_height="@dimen/_45sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentBottom="true" android:alpha="0.08" android:rotation="-23.0" android:layout_marginStart="@dimen/_105sdp" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:layout_width="@dimen/_28sdp" android:layout_height="@dimen/_28sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentBottom="true" android:alpha="0.09" android:rotation="12.0" />
+            <com.rtx.niceibo.ThemePackage.mDashImageView android:layout_width="@dimen/_18sdp" android:layout_height="@dimen/_18sdp" android:layout_marginBottom="@dimen/_25sdp" android:src="@drawable/ic_SHADEED_fun_logo" android:tint="#ffd83159" android:layout_alignParentBottom="true" android:alpha="0.08" android:rotation="-12.0" android:layout_marginStart="@dimen/_70sdp" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/time_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_8sdp" android:layout_alignParentEnd="true">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/_40sdp">
+                <com.rtx.niceibo.timewidget.Todayview android:textSize="@dimen/_32sdp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/_40sdp">
+                <Space android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_4sdp" />
+                <com.rtx.niceibo.timewidget.TimeView android:textSize="@dimen/_14sdp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="05:04 AM" />
+                <com.rtx.niceibo.timewidget.DateView android:textSize="@dimen/_8sdp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:layout_below="@id/time_layout" android:layout_marginEnd="@dimen/_8sdp" android:layout_alignParentEnd="true">
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_def android:focusable="true" android:clickable="true" android:layout_width="@dimen/_16sdp" android:layout_height="@dimen/_16sdp">
+                <ImageView android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_8sdp" android:src="@drawable/ic_ShadeeD_dash_cercle" android:tint="#ab5d20" android:foregroundGravity="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_def>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_red android:focusable="true" android:clickable="true" android:layout_width="@dimen/_16sdp" android:layout_height="@dimen/_16sdp">
+                <ImageView android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_8sdp" android:src="@drawable/ic_ShadeeD_dash_cercle" android:tint="#ffd83159" android:foregroundGravity="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_red>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_blue android:focusable="true" android:clickable="true" android:layout_width="@dimen/_16sdp" android:layout_height="@dimen/_16sdp">
+                <ImageView android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_8sdp" android:src="@drawable/ic_ShadeeD_dash_cercle" android:tint="#ff1782ac" android:foregroundGravity="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_blue>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_green android:focusable="true" android:clickable="true" android:layout_width="@dimen/_16sdp" android:layout_height="@dimen/_16sdp">
+                <ImageView android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_8sdp" android:src="@drawable/ic_ShadeeD_dash_cercle" android:tint="#ff19830d" android:foregroundGravity="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_green>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_yellow android:focusable="true" android:clickable="true" android:layout_width="@dimen/_16sdp" android:layout_height="@dimen/_16sdp">
+                <ImageView android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_8sdp" android:src="@drawable/ic_ShadeeD_dash_cercle" android:tint="#ff9f7e0a" android:foregroundGravity="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_yellow>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_purple android:focusable="true" android:clickable="true" android:layout_width="@dimen/_16sdp" android:layout_height="@dimen/_16sdp">
+                <ImageView android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_8sdp" android:src="@drawable/ic_ShadeeD_dash_cercle" android:tint="#ff900a9f" android:foregroundGravity="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_purple>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_mix android:focusable="true" android:clickable="true" android:layout_width="@dimen/_16sdp" android:layout_height="@dimen/_16sdp">
+                <ImageView android:layout_width="@dimen/_8sdp" android:layout_height="@dimen/_8sdp" android:src="@drawable/ic_ShadeeD_dash_cercle" android:tint="#ff6d9809" android:foregroundGravity="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_mix>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/main_root_layer" android:background="@drawable/SHADEeD_dash_gradint" android:layout_width="@dimen/_120sdp" android:layout_height="match_parent">
+            <ImageView android:id="@id/image_logo" android:padding="@dimen/_6sdp" android:layout_width="match_parent" android:layout_height="@dimen/_42sdp" android:src="@drawable/SHADEeD_dash_logo_main" android:layout_above="@id/main_dash_root" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/_12sdp" />
+            <LinearLayout android:orientation="vertical" android:id="@id/main_dash_root" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_12sdp" android:layout_marginEnd="@dimen/_12sdp" android:layout_alignParentStart="true">
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_TV android:id="@id/ly_live" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_live" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_tv" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_live" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_live" />
+                    </RelativeLayout>
+                    <requestFocus />
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_TV>
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_movie android:id="@id/ly_movie" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp" android:layout_marginTop="@dimen/_5sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_movie" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_movie" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_movie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vod" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_movie" />
+                    </RelativeLayout>
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_movie>
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_serise android:id="@id/ly_series" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp" android:layout_marginTop="@dimen/_5sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_series" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_series" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_series" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/series" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_series" />
+                    </RelativeLayout>
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_serise>
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_playlist android:id="@id/ly_change" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp" android:layout_marginTop="@dimen/_5sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_change" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_playlist" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_change" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="playlists" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_change" />
+                    </RelativeLayout>
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_playlist>
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_account android:id="@id/ly_account" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp" android:layout_marginTop="@dimen/_5sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_account" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_useraccount" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Account" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_account" />
+                    </RelativeLayout>
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_account>
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_reload android:id="@id/ly_reload" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp" android:layout_marginTop="@dimen/_5sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_reload" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_reload" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_reload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reload" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_reload" />
+                    </RelativeLayout>
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_reload>
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_setting android:id="@id/ly_setting" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp" android:layout_marginTop="@dimen/_5sdp" android:layout_marginBottom="@dimen/_5sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_setting" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_settings" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_setting" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/> </RelativeLayout>
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_setting>
+                <RelativeLayout android:background="#ffb6b6b6" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="@dimen/_6sdp" android:layout_marginBottom="@dimen/_6sdp" />
+                <com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_exit android:id="@id/ly_exit" android:background="@drawable/SHADEeD_dash_button_bg_a" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/_20sdp" android:layout_marginTop="@dimen/_5sdp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.rtx.niceibo.ThemePackage.mColorImageView android:id="@id/image_exit" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/ic_ShadeeD_dash_exit" android:layout_centerVertical="true" />
+                        <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@id/txt_exit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exit" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/quicksand_medium" android:layout_marginStart="@dimen/_3sdp" android:layout_toEndOf="@id/image_exit" />
+                    </RelativeLayout>
+                </com.rtx.niceibo.ThemePackage.Dashicon.CustomConstraintLayout_exit>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_43sdp" android:layout_alignParentBottom="true" android:layout_marginEnd="@dimen/_13sdp" android:layout_alignParentEnd="true">
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_youtube android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/_60sdp" android:layout_height="@dimen/_20sdp">
+                <RelativeLayout android:background="@drawable/SHADEeD_dash_button_bg_youtube" android:layout_width="@dimen/_55sdp" android:layout_height="@dimen/_15sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                    <ImageView android:id="@id/image_tube" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_15sdp" android:layout_height="@dimen/_15sdp" android:src="@drawable/ic_ShadeeD_dash_tube" android:tint="#ffffffff" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_4sdp" />
+                    <TextView android:textSize="@dimen/_6sdp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Play Trailer" android:layout_centerVertical="true" android:fontFamily="@font/quicksand_regular" android:layout_toEndOf="@id/image_tube" />
+                </RelativeLayout>
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_youtube>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_search android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/_60sdp" android:layout_height="@dimen/_20sdp" android:layout_marginStart="@dimen/_6sdp">
+                <RelativeLayout android:background="@drawable/SHADEeD_dash_button_bg_search" android:layout_width="@dimen/_55sdp" android:layout_height="@dimen/_15sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                    <ImageView android:id="@id/image_searchmovie" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_15sdp" android:layout_height="@dimen/_15sdp" android:src="@drawable/ic_ShadeeD_dash_media" android:tint="#ffffffff" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_4sdp" />
+                    <TextView android:textSize="@dimen/_6sdp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Media" android:layout_centerVertical="true" android:fontFamily="@font/quicksand_regular" android:layout_marginStart="@dimen/_6sdp" android:layout_toEndOf="@id/image_searchmovie" />
+                </RelativeLayout>
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_search>
+            <com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_imdb android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/_60sdp" android:layout_height="@dimen/_20sdp" android:layout_marginStart="@dimen/_6sdp">
+                <RelativeLayout android:background="@drawable/SHADEeD_dash_button_bg_imdb" android:layout_width="@dimen/_55sdp" android:layout_height="@dimen/_15sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                    <ImageView android:id="@id/image_imdb" android:padding="@dimen/_2sdp" android:layout_width="@dimen/_15sdp" android:layout_height="@dimen/_15sdp" android:src="@drawable/ic_ShadeeD_dash_imdb" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_4sdp" />
+                    <TextView android:textSize="@dimen/_6sdp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Information" android:layout_centerVertical="true" android:fontFamily="@font/quicksand_regular" android:layout_toEndOf="@id/image_imdb" />
+                </RelativeLayout>
+            </com.rtx.niceibo.ThemePackage.Dashicon.colorbubble.CustomConstraintLayout_imdb>
+        </LinearLayout>
+    </RelativeLayout>
+    <pl.droidsonroids.gif.GifImageView android:id="@id/progress_bar" android:visibility="gone" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:src="@drawable/loader" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <TextView android:textSize="@dimen/_13sdp" android:textColor="@color/white" android:id="@id/txt_version" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_8sdp" android:layout_marginEnd="@dimen/_15sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/gray" android:id="@id/txt_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/_15sdp" android:text="" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+.class Lcom/rtx/niceibo/web/RTXSportView$1;
+.super Landroid/webkit/WebViewClient;
+.source "RTXSportView.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/rtx/niceibo/web/RTXSportView;->init()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/rtx/niceibo/web/RTXSportView;
+
+.field final synthetic val$fadeIn:Landroid/view/animation/Animation;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    return-void
+.end method
+
+.method native constructor <init>(Lcom/rtx/niceibo/web/RTXSportView;Landroid/view/animation/Animation;)V
+.end method
+
+
+# virtual methods
+.method public native onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+.end method

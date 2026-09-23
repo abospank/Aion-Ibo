@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginBottom="@dimen/_5sdp" android:layout_centerInParent="true">
+        <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginBottom="@dimen/_5sdp" android:layout_centerInParent="true">
+                <ImageButton android:id="@id/btn_leagues" android:background="@drawable/SHADeed_sport_btn_leagues" android:focusable="true" android:clickable="true" android:layout_width="@dimen/_100sdp" android:layout_height="@dimen/_50sdp" />
+                <ImageButton android:id="@id/btn_guide" android:background="@drawable/SHADeed_sport_btn_guid" android:focusable="true" android:clickable="true" android:layout_width="@dimen/_100sdp" android:layout_height="@dimen/_50sdp" android:layout_marginTop="@dimen/_4sdp" />
+                <ImageButton android:id="@id/btn_today" android:background="@drawable/SHADeed_sport_btn_today" android:focusable="true" android:clickable="true" android:layout_width="@dimen/_100sdp" android:layout_height="@dimen/_50sdp" android:layout_marginTop="@dimen/_4sdp" android:layout_marginBottom="@dimen/_4sdp" />
+                <ImageButton android:id="@id/btn_tv" android:background="@drawable/SHADeed_sport_btn_tv" android:focusable="true" android:clickable="true" android:layout_width="@dimen/_100sdp" android:layout_height="@dimen/_50sdp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
