@@ -1,0 +1,85 @@
+name: Bootstrap - Decompile IRON IBO
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bootstrap-decompile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  decompile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    env:
+      EXPECTED_SHA256: 724a86aa97501fa2aa5aaec3b5ae49f16a16bfcc2423ecd500f1f32c4de3cd90
+      SOURCE_URL: https://ironiptv.net/iron-ibo.apk
+      APKTOOL_VERSION: 3.0.3
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Download exact source APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p input tools/bin
+          curl -fL --retry 5 --retry-delay 3 "$SOURCE_URL" -o input/iron-ibo.apk
+          ACTUAL="$(sha256sum input/iron-ibo.apk | awk '{print $1}')"
+          echo "Expected: $EXPECTED_SHA256"
+          echo "Actual:   $ACTUAL"
+          if [[ "$ACTUAL" != "$EXPECTED_SHA256" ]]; then
+            echo "::error::Downloaded IRON IBO APK does not match the user-supplied file. Refusing to decode a different binary."
+            exit 1
+          fi
+
+      - name: Download Apktool
+        run: |
+          curl -fL --retry 4 --retry-delay 2             "https://github.com/iBotPeaches/Apktool/releases/download/v$APKTOOL_VERSION/apktool_$APKTOOL_VERSION.jar"             -o tools/bin/apktool.jar
+
+      - name: Decode APK
+        run: |
+          rm -rf apktool-project
+          java -jar tools/bin/apktool.jar d -f input/iron-ibo.apk -o apktool-project
+          test -f apktool-project/apktool.yml
+          test -f apktool-project/AndroidManifest.xml
+
+      - name: Ensure stable test signing key
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p signing
+          if [[ ! -f signing/aion-ibo-debug.keystore ]]; then
+            keytool -genkeypair               -keystore signing/aion-ibo-debug.keystore               -storepass android               -keypass android               -alias aion-ibo               -keyalg RSA               -keysize 2048               -validity 10000               -dname "CN=Aion Ibo Debug,O=Aion Ibo,C=DZ"               -noprompt
+          fi
+
+      - name: Record source fingerprint
+        run: sha256sum input/iron-ibo.apk | sed 's#input/##' > SOURCE_APK.sha256
+
+      - name: Commit decoded project and test key
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apktool-project SOURCE_APK.sha256 signing/aion-ibo-debug.keystore
+
+          if git diff --cached --quiet; then
+            echo "Decoded project and signing key are already current."
+            exit 0
+          fi
+
+          git commit -m "Decompile verified IRON IBO 3.9 APK"
+          git pull --rebase origin main
+          git push origin HEAD:main
